@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="mono">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Assistant</title>
+<link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css">
+<script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="layout">
+
+  <section class="left">
+    <div class="label"><span class="dot"></span>STUDY ASSISTANT</div>
+
+    <div class="card question-card">
+      <div class="meta" id="qmeta">Loading Python...</div>
+      <div class="qtext" id="qtext">Getting things ready. The first load takes a few seconds.</div>
+      <div class="choices" id="choices"></div>
+      <input id="typed" class="typed hidden" type="text" placeholder="Type your answer" aria-label="Type your answer">
+      <div class="feedback" id="feedback"></div>
+      <div class="actions">
+        <button class="btn primary" id="check">Check answer</button>
+        <button class="btn ghost" id="hint">Hint</button>
+        <span class="score" id="score"></span>
+      </div>
+    </div>
+
+    <div class="card notes-card">
+      <div class="meta">PASTE NOTES OR TEXTBOOK TEXT</div>
+      <textarea id="notes" aria-label="Paste notes" placeholder="Paste a chapter here. Put a short title line above each section."></textarea>
+      <button class="btn secondary" id="build">Build quiz</button>
+    </div>
+  </section>
+
+  <aside class="right card player">
+    <div class="np">
+      <div class="disc" id="disc"></div>
+      <div class="np-info">
+        <div class="meta">NOW PLAYING</div>
+        <div class="np-title" id="trackName">Select a track</div>
+      </div>
+      <div class="eq paused" id="eq"><i></i><i></i><i></i></div>
+    </div>
+    <div class="bar" id="progress"><div class="fill" id="fill"></div></div>
+    <div class="times"><span id="tcur">0:00</span><span id="tdur">0:00</span></div>
+    <div class="controls">
+      <button class="cbtn" id="prev" aria-label="Previous track"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5"/></svg></button>
+      <button class="cbtn play" id="play" aria-label="Play or pause"><svg id="playIcon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
+      <button class="cbtn" id="next" aria-label="Next track"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/></svg></button>
+      <div class="bar vol" id="volume" aria-label="Volume"><div class="fill" id="volFill"></div></div>
+    </div>
+    <div class="meta">YOUR MUSIC</div>
+    <div class="playlist" id="playlist"></div>
+  </aside>
+  <audio id="audio"></audio>
+
+</main>
+
+<script type="py" src="./app.py" config="./pyscript.json"></script>
+</body>
+</html>

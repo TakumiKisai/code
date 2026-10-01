@@ -1,0 +1,96 @@
+/* THEMES: every color comes from a variable, so a theme is just new values. */
+:root, [data-theme="mono"] {
+  --bg: #050505;
+  --bg-glow: #1c1c1c;
+  --card: #0e0e0e;
+  --card-2: rgba(255,255,255,.04);
+  --border: rgba(255,255,255,.12);
+  --text: #ffffff;
+  --muted: #9a9a9a;
+  --accent: #ffffff;
+  --on-accent: #000000;
+  --good: #8be3a0;
+  --bad: #ff8f8f;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+.hidden { display: none; }
+
+body {
+  min-height: 100vh;
+  padding: 28px 32px;
+  background: radial-gradient(circle at top left, var(--bg-glow), var(--bg) 55%);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+}
+
+.layout { display: flex; gap: 28px; max-width: 1280px; margin: 0 auto; }
+.left { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.right { width: 400px; flex-shrink: 0; align-self: stretch; }
+
+.label { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 800; letter-spacing: 2px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 22px; padding: 28px; box-shadow: 0 12px 35px rgba(0,0,0,.45); }
+.question-card { display: flex; flex-direction: column; gap: 20px; min-height: 420px; }
+.meta { font-size: 11px; font-weight: 800; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; }
+.qtext { font-size: 32px; font-weight: 800; line-height: 1.3; }
+.soft { color: var(--muted); margin-top: 12px; line-height: 1.5; }
+
+.choices { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.choice { display: flex; gap: 14px; padding: 16px 18px; border-radius: 14px; border: 1px solid var(--border); background: var(--card-2); color: var(--text); font: 700 15px 'Inter', sans-serif; text-align: left; cursor: pointer; }
+.choice:hover { border-color: var(--accent); }
+.choice .num { color: var(--muted); font-weight: 800; font-size: 12px; }
+.choice.picked { border-color: var(--accent); background: rgba(255,255,255,.1); }
+.choice.right { border-color: var(--good); }
+.choice.wrong { border-color: var(--bad); }
+
+.typed { padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border); background: var(--card-2); color: var(--text); font: 700 16px 'Inter', sans-serif; }
+.feedback { min-height: 24px; font-weight: 700; color: var(--muted); }
+.feedback.good { color: var(--good); }
+.feedback.bad { color: var(--bad); }
+
+.actions { display: flex; align-items: center; gap: 12px; margin-top: auto; }
+.btn { padding: 14px 26px; border-radius: 99px; font: 800 14px 'Inter', sans-serif; cursor: pointer; }
+.btn.primary { border: 0; background: var(--accent); color: var(--on-accent); }
+.btn.ghost { border: 1px solid var(--border); background: transparent; color: var(--text); }
+.btn.secondary { border: 1px solid var(--border); background: var(--card-2); color: var(--text); align-self: flex-start; }
+.score { margin-left: auto; font-weight: 700; color: var(--muted); }
+
+.notes-card { display: flex; flex-direction: column; gap: 12px; padding: 20px; }
+textarea { height: 110px; resize: vertical; border-radius: 12px; border: 1px solid var(--border); background: var(--card-2); color: var(--text); padding: 12px; font: 14px 'Inter', sans-serif; }
+
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  .right { width: 100%; }
+  .choices { grid-template-columns: 1fr; }
+}
+
+/* MUSIC PLAYER */
+.player { display: flex; flex-direction: column; gap: 14px; }
+.np { display: flex; align-items: center; gap: 14px; padding: 14px; border-radius: 18px; background: var(--card-2); border: 1px solid var(--border); }
+.disc { width: 56px; height: 56px; border-radius: 50%; flex-shrink: 0; background: radial-gradient(circle at 35% 35%, #fff, #999, #111); position: relative; }
+.disc::after { content: ''; position: absolute; inset: 0; margin: auto; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid #999; }
+.disc.spinning { animation: spin 3s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.np-info { flex: 1; min-width: 0; }
+.np-title { font-size: 15px; font-weight: 800; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.eq { display: flex; align-items: flex-end; gap: 3px; height: 18px; }
+.eq i { width: 3px; background: var(--accent); border-radius: 99px; animation: bounce .7s infinite alternate; }
+.eq i:nth-child(1) { height: 6px; } .eq i:nth-child(2) { height: 14px; animation-delay: .15s; } .eq i:nth-child(3) { height: 9px; animation-delay: .3s; }
+.eq.paused i { animation-play-state: paused; opacity: .4; }
+@keyframes bounce { to { height: 18px; } }
+.bar { height: 8px; border-radius: 99px; background: var(--card-2); border: 1px solid var(--border); cursor: pointer; overflow: hidden; }
+.fill { height: 100%; width: 0%; border-radius: 99px; background: var(--accent); }
+.times { display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; color: var(--muted); margin-top: -6px; }
+.controls { display: flex; align-items: center; gap: 10px; }
+.cbtn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); background: var(--card-2); color: var(--text); display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.cbtn svg { width: 16px; height: 16px; }
+.cbtn.play { width: 56px; height: 56px; background: var(--accent); color: var(--on-accent); border: 0; }
+.vol { margin-left: auto; width: 80px; height: 7px; }
+.vol .fill { width: 70%; }
+.playlist { display: flex; flex-direction: column; gap: 8px; max-height: 260px; overflow-y: auto; }
+.track { display: flex; gap: 12px; padding: 12px; border-radius: 13px; border: 1px solid var(--border); background: var(--card-2); cursor: pointer; font-size: 13px; font-weight: 700; }
+.track:hover, .track.active { border-color: var(--accent); }
+.track .num { color: var(--muted); font-weight: 800; font-size: 11px; }
+@media (prefers-reduced-motion: reduce) { .disc.spinning, .eq i { animation: none; } }

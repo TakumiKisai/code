@@ -145,71 +145,71 @@ build_quiz()
 TRACKS = [
     {
         "title": "Field - Ancient Ruins",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Ancient%20Ruins.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Ancient%20Ruins.mp3"
     },
     {
         "title": "Field - Aqua Grotto",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Aqua%20Grotto.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Aqua%20Grotto.mp3"
     },
     {
         "title": "Field - Arena Plaza",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Arena%20Plaza.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Arena%20Plaza.mp3"
     },
     {
         "title": "Field - Boulder Province",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Boulder%20Province.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Boulder%20Province.mp3"
     },
     {
         "title": "Field - Green Hills",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Green%20Hills.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Green%20Hills.mp3"
     },
     {
         "title": "Field - Haunted Manor",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Haunted%20Manor.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Haunted%20Manor.mp3"
     },
     {
         "title": "Field - Icy Glaciers",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Icy%20Glaciers.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Icy%20Glaciers.mp3"
     },
     {
         "title": "Field - Jurassic Jungle",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Jurassic%20Jungle.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Jurassic%20Jungle.mp3"
     },
     {
         "title": "Field - Lush Forest",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Lush%20Forest.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Lush%20Forest.mp3"
     },
     {
         "title": "Field - Mind Asylum",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Mind%20Asylum.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Mind%20Asylum.mp3"
     },
     {
         "title": "Field - Mt. Grassland",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Mt.%20Grassland.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Mt.%20Grassland.mp3"
     },
     {
         "title": "Field - Pixie Island",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Pixie%20Island.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Pixie%20Island.mp3"
     },
     {
         "title": "Field - Riverside Road",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Riverside%20Road.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Riverside%20Road.mp3"
     },
     {
         "title": "Field - Sunset Shore",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Sunset%20Shore.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Sunset%20Shore.mp3"
     },
     {
         "title": "Field - Toxic Canyon",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Toxic%20Canyon.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Toxic%20Canyon.mp3"
     },
     {
         "title": "Field - Waterfall Passage",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Waterfall%20Passage.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Waterfall%20Passage.mp3"
     },
     {
         "title": "Field - Woodland River",
-        "src": "https://raw.githubusercontent.com/TakumiKisai/music/main/Field%20-%20Woodland%20River.mp3"
+        "src": "https://raw.githubusercontent.com/TakumiKisai/code/main/Field%20-%20Woodland%20River.mp3"
     },
 ]
 

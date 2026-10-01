@@ -143,7 +143,7 @@ build_quiz()
 # If your mp3 files are NOT inside a folder called "music", change MUSIC_FOLDER to "".
 
 TRACKS = [
-    {"title": "Field - Ancient Ruins", "src": MUSIC_FOLDER + "Field - Ancient Ruins.mp3"},
+    {"title": "Field - Ancient Ruins", "src": "music/Field - Ancient Ruins.mp3"},
     {"title": "Field - Aqua Grotto", "src": MUSIC_FOLDER + "Field - Aqua Grotto.mp3"},
     {"title": "Field - Arena Plaza", "src": MUSIC_FOLDER + "Field - Arena Plaza.mp3"},
     {"title": "Field - Boulder Province", "src": MUSIC_FOLDER + "Field - Boulder Province.mp3"},
